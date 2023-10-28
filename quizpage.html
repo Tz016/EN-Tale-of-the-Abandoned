@@ -63,10 +63,10 @@
 </head>
 
 <body>
-    <audio autoplay loop id="bg-audio">
+    <!-- <audio autoplay loop id="bg-audio">
         <source src="Alex Couture - Morning Rises.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
-      </audio>
+      </audio> -->
       <button id="mute-button">🔊</button>
       <div class="loader"></div>
     <div class="book" id="page0" >
@@ -75,7 +75,7 @@
             <p id="t2">A Manhattan pigeon with deep artistic understandings will lead you through these artworks, each with different fates and marked with different prices, to test your ability to discern between commercially "successful" and "failed" artworks.</p>
         </div>
         <div class="still">
-            <p id="line1">The pigeon knows that this city is  brimming with artistic talents and art galleries.It is confident that it can pick out artworks both appealing and valuable.</p>
+            <p id="line1">The pigeon heard that an emerging curatorial project has been collecting artworks.</p>
             <p id="line2">The pigeon knows that this city is  brimming with artistic talents and art galleries.It is confident that it can pick out artworks both appealing and valuable.
             </p>
         </div>
@@ -101,7 +101,7 @@
     </div>
     <div class="book" id="page2" style="display: none;">
         <!-- 第二页内容 -->
-        <p>Question 1 through 4: An “accomplished” piece or abandoned art?</p>
+        <p>Question 1 through 4: <br>An “accomplished” piece or abandoned art?</p>
         <div class="button-container">
             <button class='button' id='b1' onclick="showPage('page3',-2)">💰</button>
             <button class='button' id="b2" onclick="showPage('page3',-2)">🗑️</button>
@@ -112,7 +112,7 @@
 
     <div class="book" id="page3" style="display: none;">
         <!-- 第三页内容 -->
-        <p>Question 2 through 4: An “accomplished” piece or abandoned art?</p>
+        <p>Question 2 through 4:<br>An “accomplished” piece or abandoned art?</p>
         <div class="button-container">
             <button class='button' id='b1' onclick="showPage('page4',-1)">💰</button>
             <button class='button' id='b2' onclick="showPage('page4',-2)">🗑️</button>
@@ -122,7 +122,7 @@
 
     <div class="book" id="page4" style="display: none;">
         <!-- 第三页内容 -->
-        <p>Question 3 through 4: An “accomplished” piece or abandoned art?</p>
+        <p>Question 3 through 4: <br>An “accomplished” piece or abandoned art?</p>
         <div class="button-container">
             <button class='button' id='b1' onclick="showPage('page5',-1)">💰</button>
             <button class='button' id='b2' onclick="showPage('page5',-2)">🗑️</button>
@@ -131,7 +131,7 @@
     </div>
     <div class="book" id="page5" style="display: none;">
         <!-- 第三页内容 -->
-        <p>Question 4 through 4: An “accomplished” piece or abandoned art?</p>
+        <p>Question 4 through 4: <br>An “accomplished” piece or abandoned art?</p>
         <div class="button-container">
             <button class='button' id="b1" onclick="showPage('page6',-2)">💰</button>
             <button class='button' id="b2" onclick="showPage('page6',-1)">🗑️</button>
@@ -145,7 +145,7 @@
     </div>
     <div class="book" id="page7" style="display: none;">
         <!-- 第三页内容 -->
-        <p id="p7para">Question 1 through 3: What is the market value of this work?</p>
+        <p id="p7para">Question 1 through 3: <br>What is the market value of this work?</p>
         <div class="slider-container">
             <input type="range" min="0" max="15000" value="7500" class="slider" id="slider1">
             <p class="sliderValue"><span  id="sliderValue1">7500</span>$</p>
@@ -155,7 +155,7 @@
     </div>
     <div class="book" id="page8" style="display: none;">
         <!-- 第三页内容 -->
-        <p id="p8para">Question 2 through 3: What is the market value of this work?</p>
+        <p id="p8para">Question 2 through 3:<br> What is the market value of this work?</p>
         <div class="slider-container">
             <input type="range" min="0" max="15000" value="7500" class="slider" id="slider2">
             <p class="sliderValue"><span id="sliderValue2">7500</span>$</p>
@@ -165,7 +165,7 @@
     </div>
     <div class="book" id="page9" style="display: none;">
         <!-- 第三页内容 -->
-        <p id="p9para">Question 3 through 3: What is the market value of this work?</p>
+        <p id="p9para">Question 3 through 3: <br>What is the market value of this work?</p>
         <div class="slider-container">
             <input type="range" min="0" max="15000" value="7500" class="slider" id="slider3">
             <p class="sliderValue"><span  id="sliderValue3">7500</span>$</p>
@@ -241,10 +241,10 @@
     <img id="p23" src="pic/p23.jpeg">
     <div class="top"></div>
     <div class="bottom"></div>
-    <p id="jxf">The pigeon continues to fly to the Lower East Side.</p>
+    <p id="jxf">The pigeon<br>continues to fly to the Lower East Side.</p>
     <img id="p25" src="pic/p25.jpg">
     <img id="p26" src="pic/p26.jpg">
-    <p id="ljx">Huge trash bins crowd the streets. <br>The pigeon can’t help but wonder, “Do people also look for abandoned artworks  like me?
+    <p id="ljx">Huge trash bins crowd the streets. <br>The pigeon can’t help but wonder, <br>“Do people also look for abandoned artworks  like me?
     </p>
     <button class='button' id='skip' onclick="showPage('page15',-3)">Skip</button>
 </div>
@@ -274,7 +274,7 @@
         <div class="sketchContainer">
             <img id="bggif" src="pic\mySketch (1).gif">
         </div>
-        <div id="info">Scroll up for more information<br> on the curatorial project! </div>
+        <div id="info">Scroll up for more information on the curatorial project! </div>
         <div class="result">
             <h1>According to the pigeon's careful calculations…
             </h1>

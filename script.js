@@ -46,7 +46,7 @@ muteButton.addEventListener('click', () => {
     muteButton.textContent = '🔇';
   }
 });
-audioElement.volume = 0.5; 
+// audioElement.volume = 0.5; 
 
 
 

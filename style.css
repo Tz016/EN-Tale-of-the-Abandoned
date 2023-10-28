@@ -1,6 +1,12 @@
 @font-face {
     font-family: 'uploadfont'; /* 自定义字体名称 */
-    src: url('IndieFlower.ttf') format('truetype'); 
+    src: url('IndieFlower.ttf') format('truetype');
+    /* src: Arial black format('truetype'); 字体文件路径和格式 */
+  }
+
+  @font-face {
+    font-family: 'uploadfont2'; /* 自定义字体名称 */
+    src: url("Rou.ttf") format('truetype');
     /* src: Arial black format('truetype'); 字体文件路径和格式 */
   }
   .loader {
@@ -68,17 +74,17 @@
     top:15vh;
     transition: font-size 0.5s ease;
   }
-  #q0:hover{
+  #q0:hover,#q-1:hover{
     font-size:1.8vh;
   }
   #q-1{
     position: absolute;
     font-size:1.7vh;
-    writing-mode: vertical-rl;
+    rotate: 45deg;
     text-orientation: upright;
-    top:29vh;
-    right:8vw;
-    height:75vh;
+    bottom:30vh;
+    right:-10vw;
+    width:70vh;
   }
   /* #type{
     position: absolute;
@@ -101,7 +107,7 @@
       padding-left: 5%;
       padding-right:5%;
       top:43%;
-      left:20%;
+      right:20%;
       font-size:3.5vh;
       font-weight: bolder;
       text-shadow: #FC0 1px 0 10px;
@@ -177,8 +183,10 @@
     font-size:5vw;
     opacity:0;
     z-index: 10;
-    animation: appear 7s;
-    animation-delay:9.2s;
+    animation: appear 14s;
+    animation-delay:20s;
+    text-shadow: 0.5px 0.5px 0.5px #000000;
+
 }
 /* #line1{
   position: absolute;
@@ -360,8 +368,8 @@
     font-size:0.8rem;
     color:rgb(255, 204, 0);
     top: 20px;
-    left:20vw;
-    width:20vw;
+    right:55vw;
+    width:40vw;
     animation: float2 1s ease-in-out infinite;
   }
   @keyframes float2{
@@ -517,7 +525,7 @@ body {
     min-height: 100vh; */
     touch-action: manipulation;
     background-image: url('pic/background.jpeg');
-    font-family: 'uploadfont', sans-serif; /* 使用自定义字体，如果无法加载则使用默认 sans-serif 字体 */
+    font-family: 'uploadfont', 'uploadfont2', sans-serif; /* 使用自定义字体，如果无法加载则使用默认 sans-serif 字体 */
     font-weight: bold;
     font-size:large;
     overflow: hidden;
@@ -534,6 +542,7 @@ body {
   }
   #q1,#q2{
     position:absolute;
+    text-shadow: 0.5px 0.5px 0.5px #000000;
     font-size: 1.2rem;
     margin: 10vw;
     top:17vh;
@@ -555,15 +564,17 @@ body {
     margin:5vw;
     z-index: 10;
     font-size:4vw;
+    font-weight: bolder;
+    text-shadow: 0.5px 0.5px 0.5px #000000;
   }
   #t1{
     opacity: 0;
-    animation: introanim1 4s;
+    animation: introanim1 10s;
   }
  #t2{
     opacity: 0;
-    animation: introanim2 5.7s;
-    animation-delay: 4s;
+    animation: introanim2 10s;
+    animation-delay: 10s;
  }
 
   @keyframes introanim1{
@@ -660,33 +671,33 @@ body {
 }
 }
   #image1{ 
-    animation: floatup 2s ;
+    animation: floatup 5s ;
   }
 
   #image2{
-  animation: floatup 2s ;
-  animation-delay: 2s;
+  animation: floatup 5.5s ;
+  animation-delay: 4.5s;
 }
 
 #image3{
-  animation: floatup 2s ;
-  animation-delay: 4s;
-}
-#image4{
-  animation: floatup 3s ;
-  animation-delay: 6s;
-}
-#image5{
-  animation: floatup 3s ;
+  animation: floatup 5.5s ;
   animation-delay: 9s;
 }
+#image4{
+  animation: floatup 5.5s ;
+  animation-delay: 13.5s;
+}
+#image5{
+  animation: floatup 5.5s ;
+  animation-delay: 18s;
+}
 #image6{
-  animation: floatup 3s ;
-  animation-delay: 12s;
+  animation: floatup 5.5s ;
+  animation-delay: 22.5s;
 }
 #image7{
-  animation: floatup 3s ;
-  animation-delay: 15s;
+  animation: floatup 5.5s ;
+  animation-delay: 27s;
 }
 #p9{
   animation: floatup2 4s ;
@@ -891,12 +902,9 @@ body {
 
 #page2 p {
     display:inline-block;
-    margin-left:70%;
-    width: 15%;
-    height: 48%;
+    margin-left:10%;
     font-size: medium;
-    writing-mode: vertical-rl;
-    margin-top: 40px;
+    margin-top: 12vh;
 }
 /* #page2 .button-container {
     position: absolute;
@@ -926,11 +934,9 @@ body {
 
 #page3 p {
     display:inline-block;
-    margin-left:50%;
-    width: 40%;
-    height: 20%;
+    margin-left:30%;
     font-size: medium;
-    margin-top: 55px;
+    margin-top: 6vh;
 }
 /* #page3 .button-container {
     position: absolute;
@@ -1070,7 +1076,7 @@ body {
   width: 60%;
   height: 40%;
   font-size: medium;
-  margin-top: 20%;
+  margin-top: 15%;
 }
 
 
@@ -1116,6 +1122,7 @@ body {
   margin:8%;
   font-size: large;
   opacity:0;
+  text-shadow: 0.5px 0.5px 0.5px black;
   animation:floatup7 8s;
   animation-delay:3.8s;
 
@@ -1226,12 +1233,12 @@ body {
 }
 #ljx{
   position:absolute;
-  writing-mode: vertical-rl;
   top:8vh;
   left:5vw;
   height:auto;
   font-size: 1rem;
   opacity:0;
+  text-shadow: 0.5px 0.5px 0.5px #000000;
   animation:disappear 10s;
   animation-delay:14.5s;
 }
@@ -1257,11 +1264,11 @@ body {
 }
 #jingyitf{
   position:absolute;
-  top:13vh;
-  right:50vw;
-  writing-mode: vertical-rl;
+  top:20vh;
+  right:20vw;
   font-size: 2vh;
-  height: 60vh;
+  width: 70vw;
+  rotate:-20deg;
   z-index: 4;
   opacity: 0;
   animation: disappear 8s;
@@ -1272,7 +1279,7 @@ position: absolute;
 left:-35vw;
 top:-60vh;
 opacity:0;
-animation: disappear 30s;
+animation: disappear 35s;
 animation-delay: 9.5s;
 }
 #prepare{
@@ -1280,10 +1287,10 @@ animation-delay: 9.5s;
   font-size: 2vh;
   left:10vw;
   right:10vw;
-  top:25vh;
+  top:10vh;
   text-shadow: 1px 1px 1px #49a7c486;
   opacity:0;
-  animation: disappear 25s;
+  animation: disappear 30s;
   animation-delay: 14.5s;
 }
 #curation{
@@ -1358,6 +1365,9 @@ animation-delay: 9.5s;
   50%{
     transform: translate(0,0) scale(1); 
     opacity: 1;
+  }
+  80%{
+    opacity:1;
   }
   100%{
     transform: translate(10%,-70%) scale(1); 
@@ -1628,11 +1638,14 @@ animation-delay: 9.5s;
 }
 #jxf{
   position: absolute;
-  left:25vw;
-  width:60vw;
+  left:15vw;
+  width:70vw;
   bottom:30vh;
   animation: disappear 6s;
   opacity:0;
+  text-shadow: 0.5px 0.5px 0.5px #000000;
+  align-self: center;
+  justify-self: center;
   animation-delay: 4s;
 }
 @keyframes disappear {
