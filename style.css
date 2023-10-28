@@ -83,8 +83,9 @@
     rotate: 45deg;
     text-orientation: upright;
     bottom:30vh;
-    right:-10vw;
-    width:70vh;
+    left:0vw;
+    right:0vw;
+    width:100vw;
   }
   /* #type{
     position: absolute;
