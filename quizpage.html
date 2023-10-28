@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Tale of the Abandoned">
+    <meta property="og:description" content='This is a "utilitarianist" quiz  about  art connoisseurship, yet not directly regarding art; begin the quiz to see if your artistic taste meets the standards of "experts" in the art market!'>
+    <meta property="og:image" content="https://tz016.github.io/Tale-of-the-Abandoned/pic/IMG.jpg"/>
+    <link rel="icon" href="pic/img_icon.ico" type="image/x-icon">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="preload" href="pic/background.jpeg" as="image"> -->
+    <link rel="preload" href="pic/p1-4/1-1城市背景.jpeg" as="image">
+    <link rel="preload" href="pic/p1-4/1-2城市背景.jpeg" as="image">
+    <link rel="preload" href="pic/p1-4/1-3城市背景.jpeg" as="image">
+    <link rel="preload" href="pic/p1-4/1-4城市背景.jpeg" as="image">
+    <link rel="preload" href="pic/p1-4/1-5城市背景.jpeg" as="image">
+    <link rel="preload" href="pic/p1-4/1-6城市背景.jpeg" as="image">
+    <link rel="preload" href="pic/p1-4/1-7城市背景.jpeg" as="image">
+    <link rel="preload" href="pic/p1-4/1-7鸽子无背景.GIF" as="image">
+    <link rel="preload" href="pic/p9.jpeg" as="image">
+    <link rel="preload" href="pic/p10.jpeg" as="image">
+    <link rel="preload" href="pic/p11.jpg" as="image">
+
+    <!-- <link rel="preload" href="pic/p12.jpg" as="image"> -->
+    <!-- <link rel="preload" href="pic/p13.jpg" as="image"> -->
+    <!-- <link rel="preload" href="pic/p14.jpg" as="image"> -->
+    <!-- <link rel="preload" href="pic/p15.jpg" as="image">
+    <link rel="preload" href="pic/p16.jpg" as="image">
+    <link rel="preload" href="pic/p23.jpeg" as="image">
+    <link rel="preload" href="pic/p24.jpeg" as="image">
+    <link rel="preload" href="pic/p25.jpg" as="image">
+    <link rel="preload" href="pic/p26.jpg" as="image">
+    <link rel="preload" href="pic/p27.jpg" as="image">
+    <link rel="preload" href="pic/page15.jpg" as="image"> -->
+    <!-- <link rel="preload" href="pic/scene2_1wpic.jpeg" as="image">
+    <link rel="preload" href="pic/scene2_2wpic.jpeg" as="image">
+    <link rel="preload" href="pic/scene2_3wpic.jpeg" as="image">
+    <link rel="preload" href="pic/scene2_4wpic.jpeg" as="image"> -->
+    <!-- <link rel="preload" href="pic/15-16合并.jpeg" as="image">
+    <link rel="preload" href="pic/放大鸟.jpeg" as="image">
+    <link rel="preload" href="pic/右下鸟.jpeg" as="image">
+    <link rel="preload" href="pic/p1-6/1.jpeg" as="image">
+    <link rel="preload" href="pic/31/1_0_1200.jpeg" as="image">
+    <link rel="preload" href="pic/31/1_0_176400.jpeg" as="image">
+    <link rel="preload" href="pic/31/1_1_0.JPG" as="image">
+    <link rel="preload" href="pic/31/2_0_2000.jpeg" as="image">
+    <link rel="preload" href="pic/31/2_0_1812500.jpeg" as="image">
+    <link rel="preload" href="pic/31/2_1_0.JPG" as="image">
+    <link rel="preload" href="pic/31/3_0_550.jpeg" as="image">
+    <link rel="preload" href="pic/31/3_0_750.jpeg" as="image">
+    <link rel="preload" href="pic/31/3_1_0.JPG" as="image">
+    <link rel="preload" href="pic/poster.jpg" as="image"> -->
+    <!-- <script src="data.js"></script> -->
+    <!-- <script src="p5.min.js"></script>
+    <script src="finalPganim.js"></script> -->
+    <link rel="icon" href="pic/birdfavicon.ico" type="image/x-icon">
+    <title>测测你的艺术品味够不够“内行”</title>
+</head>
+
+<body>
+    <audio autoplay loop id="bg-audio">
+        <source src="Alex Couture - Morning Rises.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <button id="mute-button">🔊</button>
+      <div class="loader"></div>
+    <div class="book" id="page0" >
+        <div class="intro">
+            <p id="t1">We discovered many abandoned artworks in the garbage heaps of art schools in New York.In stark contrast with them are the large and small gallery shows in this capital of the global center of art that never seems to take a break. </p>
+            <p id="t2">A Manhattan pigeon with deep artistic understandings will lead you through these artworks, each with different fates and marked with different prices, to test your ability to discern between commercially "successful" and "failed" artworks.</p>
+        </div>
+        <div class="still">
+            <p id="line1">The pigeon knows that this city is  brimming with artistic talents and art galleries.It is confident that it can pick out artworks both appealing and valuable.</p>
+            <p id="line2">The pigeon knows that this city is  brimming with artistic talents and art galleries.It is confident that it can pick out artworks both appealing and valuable.
+            </p>
+        </div>
+        <img id="gif" src="pic/p1-4/1-7鸽子无背景.GIF">
+        <img id="image1" src="pic/p1-4/1-1城市背景.jpeg" alt="Image 1">
+        <img id="image2" src="pic/p1-4/1-2城市背景.jpeg" alt="Image 2">
+        <img id="image3" src="pic/p1-4/1-3城市背景.jpeg" alt="Image 3">
+        <img id="image4" src="pic/p1-4/1-4城市背景.jpeg" alt="Image 4">
+        <img id="image5" src="pic/p1-4/1-5城市背景.jpeg" alt="Image 2">
+        <img id="image6" src="pic/p1-4/1-6城市背景.jpeg" alt="Image 3">
+        <img id="image7" src="pic/p1-4/1-7城市背景.jpeg" alt="Image 4">
+        <button class='button' id='skip' onclick="showPage('page1',-3
+        )">Skip</button>
+    </div>
+    </div>
+    <div class="book" id="page1" style="display: none;">
+        <img id="p9" src="pic/p9.jpeg">
+        <img id="p10" src="pic/p10.jpeg">
+        <div id="q1">There are several canvases afloat on the lake of Central Park.<br>
+            Are they artworks with actual buyers in real life or works that were deserted?
+            </div>
+        <button class='button' id='skip' onclick="showPage('page2',-3)">Skip</button>
+    </div>
+    <div class="book" id="page2" style="display: none;">
+        <!-- 第二页内容 -->
+        <p>Question 1 through 4: An “accomplished” piece or abandoned art?</p>
+        <div class="button-container">
+            <button class='button' id='b1' onclick="showPage('page3',-2)">💰</button>
+            <button class='button' id="b2" onclick="showPage('page3',-2)">🗑️</button>
+        <!-- -1正 -->
+        </div>
+        <button class='back' id="TFback" onclick="backPage('page2')">&lt;Back</button>
+    </div>
+
+    <div class="book" id="page3" style="display: none;">
+        <!-- 第三页内容 -->
+        <p>Question 2 through 4: An “accomplished” piece or abandoned art?</p>
+        <div class="button-container">
+            <button class='button' id='b1' onclick="showPage('page4',-1)">💰</button>
+            <button class='button' id='b2' onclick="showPage('page4',-2)">🗑️</button>
+        </div>
+        <button class='back' id="TFback" onclick="backPage('page3')">&lt;Back</button>
+    </div>
+
+    <div class="book" id="page4" style="display: none;">
+        <!-- 第三页内容 -->
+        <p>Question 3 through 4: An “accomplished” piece or abandoned art?</p>
+        <div class="button-container">
+            <button class='button' id='b1' onclick="showPage('page5',-1)">💰</button>
+            <button class='button' id='b2' onclick="showPage('page5',-2)">🗑️</button>
+        </div>
+        <button class='back' id="TFback" onclick="backPage('page4')">&lt;Back</button>
+    </div>
+    <div class="book" id="page5" style="display: none;">
+        <!-- 第三页内容 -->
+        <p>Question 4 through 4: An “accomplished” piece or abandoned art?</p>
+        <div class="button-container">
+            <button class='button' id="b1" onclick="showPage('page6',-2)">💰</button>
+            <button class='button' id="b2" onclick="showPage('page6',-1)">🗑️</button>
+        </div>
+        <button class='back' id="TFback" onclick="backPage('page5')">&lt;Back</button>
+    </div>
+    
+    <div class="book" id="page6" style="display: none;">
+        <p id="q2">&nbsp;The pigeon found a box of artworks with price tags in the cellars. Would you guess what their market value is?<br>&nbsp;P.S. A few abandoned pieces with market value of 0 are also mixed into the collection! Can you spot them?</p>
+        <img id="p11" src="pic/p11.jpg">
+    </div>
+    <div class="book" id="page7" style="display: none;">
+        <!-- 第三页内容 -->
+        <p id="p7para">Question 1 through 3: What is the market value of this work?</p>
+        <div class="slider-container">
+            <input type="range" min="0" max="15000" value="7500" class="slider" id="slider1">
+            <p class="sliderValue"><span  id="sliderValue1">7500</span>$</p>
+        </div>
+        <button class='back' id="sliderback" onclick="backPage('page7')"><</button>
+        <button class='next'  onclick="showPage('page8',sliderValue1)">></button>
+    </div>
+    <div class="book" id="page8" style="display: none;">
+        <!-- 第三页内容 -->
+        <p id="p8para">Question 2 through 3: What is the market value of this work?</p>
+        <div class="slider-container">
+            <input type="range" min="0" max="15000" value="7500" class="slider" id="slider2">
+            <p class="sliderValue"><span id="sliderValue2">7500</span>$</p>
+        </div>
+        <button class='back' id="sliderback" onclick="backPage('page8')"><</button>
+        <button class='next'  onclick="showPage('page9',sliderValue2)">></button>
+    </div>
+    <div class="book" id="page9" style="display: none;">
+        <!-- 第三页内容 -->
+        <p id="p9para">Question 3 through 3: What is the market value of this work?</p>
+        <div class="slider-container">
+            <input type="range" min="0" max="15000" value="7500" class="slider" id="slider3">
+            <p class="sliderValue"><span  id="sliderValue3">7500</span>$</p>
+        </div>
+        <button class='back' id="sliderback" onclick="backPage('page9')"><</button>
+        <button class='next'  onclick="showPage('page10',sliderValue3)">></button>
+    </div>
+    
+    <script>
+    for(let i=1;i<=3;i++){
+  const slider = document.getElementById(`slider${i}`);
+  const sliderValueDisplay = document.getElementById(`sliderValue${i}`);
+  slider.addEventListener("input", function() {
+      let sliderValue = slider.value;
+      sliderValueDisplay.textContent = sliderValue;
+  });}
+
+    </script>
+
+<div class="book" id="page10" style="display: none;">
+    <img id="bird" src="pic/右下鸟.jpeg">
+    <img id="birdgif" src="pic/p1-4/1-7鸽子无背景.GIF">
+    <img id="p15" src="pic/15-16合并.jpeg">
+    <img id="p16" src="pic/p1-6/1.jpeg">
+    <!-- <img id="p17" src="pic/p1-6/2.png">
+    <img id="p18" src="pic/p1-6/3.png">
+
+    <img id="p19" src="pic/p1-6/4.png"> -->
+    <p id="q3">A passer-by wants the pigeon to help them evaluate the worth of their collection. Which work sold for the highest price?
+    </p>
+    <button class='button' id='skip' onclick="showPage('page11',-3)">Skip</button>
+</div>
+
+<div class="book" id="page11" style="display:none;">
+    <!-- 第三页内容 -->
+    <p id="p11para">Question 1 through 3: Select the piece you think sold for the highest price among the three works.
+    </p>
+    <button id="nextpic" onclick="nextpic(1)">➦</button>
+    <div id="picframe">
+        <img class="q31" onclick="showPage('page12',-2)" id="q31_1_0" src="pic/31/1_1_0.JPG">
+        <img class="q31" onclick="showPage('page12',-1)" id="q31_1_1" src="pic/31/1_0_176400.jpeg" style="display:none;">
+        <img class="q31" onclick="showPage('page12',-2)" id="q31_1_2" src="pic/31/1_0_1200.jpeg" style="display:none;">
+    </div>
+    <button class='back' id="sliderback" onclick="backPage('page11')"><</button>
+    <!-- <button class='next'  onclick="showPage('page12',-1)">></button> -->
+</div>
+
+<div class="book" id="page12" style="display: none;">
+    <!-- 第三页内容 -->
+    <p id="p12para">Question 2 through 3: Select the piece you think sold for the highest price among the three works.</p>
+    <button id="nextpic" onclick="nextpic(2)">➦</button>
+    <div id="picframe">
+        <img class="q31" onclick="showPage('page13',-2)" id="q31_2_0" src="pic/31/2_0_2000.jpeg">
+        <img class="q31" onclick="showPage('page13',-1)" id="q31_2_1" src="pic/31/2_0_1812500.jpeg" style="display:none;">
+        <img class="q31" onclick="showPage('page13',-2)" id="q31_2_2" src="pic/31/2_1_0.JPG" style="display:none;">
+    </div>
+    <button class='back' id="sliderback" onclick="backPage('page12')"><</button>
+</div>
+<div class="book" id="page13" style="display: none;">
+    <!-- 第三页内容 -->
+    <p id="p13para">Question 3 through 3: Select the piece you think sold for the highest price among the three works.</p>
+    <button id="nextpic" onclick="nextpic(3)">➦</button>
+    <div id="picframe">
+        <img class="q31" onclick="showPage('page14',-2)" id="q31_3_0" src="pic/31/3_0_750.jpeg">
+        <img class="q31" onclick="showPage('page14',-1)" id="q31_3_1" src="pic/31/3_1_0.JPG" style="display:none;">
+        <img class="q31" onclick="showPage('page14',-2)" id="q31_3_2" src="pic/31/3_0_550.jpeg" style="display:none;">
+    </div>
+    <button class='back' id="sliderback" onclick="backPage('page13')"><</button>
+</div>
+<div class="book" id="page14" style="display: none;">
+    <!-- 第三页内容 -->
+    <img id="p22" src="pic/p16.jpg">
+    <img id="p23" src="pic/p23.jpeg">
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <p id="jxf">The pigeon continues to fly to the Lower East Side.</p>
+    <img id="p25" src="pic/p25.jpg">
+    <img id="p26" src="pic/p26.jpg">
+    <p id="ljx">Huge trash bins crowd the streets. <br>The pigeon can’t help but wonder, “Do people also look for abandoned artworks  like me?
+    </p>
+    <button class='button' id='skip' onclick="showPage('page15',-3)">Skip</button>
+</div>
+<div class="book" id="page15" style="display: none;">
+    <!-- 第三页内容 -->
+    <p id="p15para">&nbsp;&nbsp;An “accomplished” piece or abandoned art?</p>
+        <div class="button-container">
+            <button class='button' id='b1' onclick="showPage('page16',-2)">💰</button>
+            <button class='button' id="b2" onclick="showPage('page16',-1)">🗑️</button>
+        </div>
+        <button class='back' id="TFback" onclick="backPage('page15')">&lt;Back</button>
+    </div>
+    <div class="book" id="page16" style="display: none;">
+        <img id="jingyi" src="pic/page15.jpg">
+        <img id="p27" src="pic/p27.jpg">
+        <p id="jingyitf"></p>
+        <img id="ball" src="pic/mySketch (5).gif">
+        <img id="curation" src="pic/curation.jpg">
+        <p id="thx">Thank you for accompanying<br>the pigeon on this journey</p>
+        <p id="prepare"> We are The Catchers Curation, a team of student curators who collect abandoned artwork in New York.<br><br>In the quiz you've seen many of the abandoned works that our student curators collect offline in New York, which to many viewers are just as moving as the high-priced paintings on the market,<br><br><em>From November 4th to November 19th</em>, we are organizing an offline flash art exhibition <em>"Tale of the Abandoned: Salvaged Works from Art School Waste"</em> in New York City, <br>where we will revitalize these abandoned works in a poetic exhibition space and revisit their twisted and jagged "discarded" pasts.<br><br>Scroll up on the next page to see the exhibition poster and learn more!</p>
+        <!-- <button class='button' id='skip' onclick="showPage('page11',-3)">Skip</button> -->
+    </div>
+    <!-- result -->
+
+    <div class="book" id="page17" style="display: none;">
+        <section class="resultpage" id="result1">
+        <div class="sketchContainer">
+            <img id="bggif" src="pic\mySketch (1).gif">
+        </div>
+        <div id="info">Scroll up for more information<br> on the curatorial project! </div>
+        <div class="result">
+            <h1>According to the pigeon's careful calculations…
+            </h1>
+            <p id="result"></p>
+            <!-- <p id="longestTimeQuestion"></p> -->
+            <p id="TFQuestions"></p>
+            <p id="others"></p>
+        </div>
+        <div class="message">
+        <h1>Say something to the pigeon!</h1>
+        <input type="text" id="message" placeholder="The pigeon: Please">
+        <button id="submit">Send!</button>
+        <div id="messages">
+    </div>
+        </div>
+        <div id="arrow1">《</div>
+        <div id="tip">滑动屏幕</div>
+    </section>
+        <section class="resultpage" id="result2">
+            <div id="arrow2">》</div>
+        <img id="poster" src="pic/poster.jpg">
+        </div>
+    
+    </section>
+        <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+        <script type="module">
+
+          import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js'
+      
+      // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+      import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js'
+  
+      // Add Firebase products that you want to use
+      import { getAuth } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js'
+      import { updateDoc,getFirestore,doc, setDoc,collection, getDocs,getDoc } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js'
+      const firebaseConfig = {
+apiKey: "AIzaSyCzDabBMOoijaRjE_IaliYYXcjImZCiK4k",
+authDomain: "questionnaire-3a4a0.firebaseapp.com",
+projectId: "questionnaire-3a4a0",
+storageBucket: "questionnaire-3a4a0.appspot.com",
+messagingSenderId: "796199687011",
+appId: "1:796199687011:web:4b36cfbdaa18e2b03ff956",
+measurementId: "G-Y8LKHVJ0ES"
+};
+const app=initializeApp(firebaseConfig)
+const db = getFirestore(app);
+const messages=[];
+var uid=`${new Date().getTime()}-${Math.random()}`;
+const messageInput = document.getElementById("message");
+const submitButton = document.getElementById("submit");
+const messagesDiv = document.getElementById("messages");
+submitButton.addEventListener("click",addMessage);
+async function addMessage(){
+    const message=messageInput.value;
+    console.log(message);
+    if(message.trim()!=""){
+        const docRef=doc(db,"users",uid)
+        const docSnap = await getDoc(docRef);
+        console.log(docSnap.data())
+        if(!("message" in docSnap.data())){
+            console.log(docSnap.data())
+        await updateDoc(doc(db,"users",uid),{message:message});
+    }else{
+        await updateDoc(doc(db,"users",uid),{message:`${docSnap.data()["message"]} | ${message}`});
+    }
+        messages.push(message);
+        displayMessages();
+        messageInput.value="";
+    }
+}
+function displayMessages() {
+            messagesDiv.innerHTML = "";
+            messages.forEach((message, index) => {
+                const messageElement = document.createElement("div");
+                messageElement.textContent = message;
+                messagesDiv.appendChild(messageElement);
+            });
+        }
+
+// import { TFQuestion,SliderQuestion,correctTF,correctslider,percen } from './script.js';
+// db.collection("users").doc(new Date.getTime()+Math.random()).set(
+window.record=await async function record(){
+const docData={
+    选择题: TFQuestion,
+    滑轨题: SliderQuestion,
+    正确选择题数: correctTF,
+    正确滑轨题数: correctslider,
+    正确率: percen,
+}
+// )
+await setDoc(doc(db,"users",uid),docData)
+.then(() => {
+    startresult=0;
+    console.log("Document successfully written!");
+})
+.catch((error) => {
+    console.error("Error writing document: ", error);
+});
+var times=0;
+var totalTF=0;
+var totalslider=0;
+var totalslider1=0;
+var totalslider2=0;
+var totalslider3=0;
+var totalpercen=0;
+const querySnapshot = await getDocs(collection(db, "users"));
+querySnapshot.forEach((doc) => {
+    if(doc.id!="不要删"){
+  const iddata=doc.data();
+  times+=1;
+  totalTF+=iddata["正确选择题数"];
+  totalslider1+=iddata["滑轨题"][0];
+  totalslider2+=iddata["滑轨题"][1];
+  totalslider3+=iddata["滑轨题"][2];
+  totalslider+=iddata["正确滑轨题数"];
+  totalpercen+=iddata["正确率"];
+  try{if("message" in iddata){messages.push(iddata["message"])
+console.log(messages)}
+}catch(err){
+    console.log("no message")
+}
+    }
+});
+totalTF=Math.round(totalTF/times * 100) / 100;
+totalslider=Math.round(totalslider/times * 100) / 100;
+totalslider1=Math.round(totalslider1/times * 100) / 100;
+totalslider2=Math.round(totalslider2/times * 100) / 100;
+totalslider3=Math.round(totalslider3/times * 100) / 100;
+totalpercen=Math.round(totalpercen/times * 100) / 100;
+displayMessages()
+return [times, totalTF,totalslider,totalpercen,totalslider1,totalslider2,totalslider3];
+}
+console.log("end")
+ </script>
+    
+
+    <!-- <div class="coordinates" id="coordinates">Mouse Coordinates: (0, 0)</div> -->
+</body>
+
+</html>
