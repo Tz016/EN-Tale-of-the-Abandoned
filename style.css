@@ -1288,7 +1288,7 @@ animation-delay: 9.5s;
   font-size: 2vh;
   left:10vw;
   right:10vw;
-  top:10vh;
+  top:6vh;
   text-shadow: 1px 1px 1px #49a7c486;
   opacity:0;
   animation: disappear 30s;
