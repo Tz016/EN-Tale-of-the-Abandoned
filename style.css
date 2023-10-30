@@ -1230,7 +1230,7 @@ body {
   width: 100vw;;
   opacity: 0;
   animation: rubbish 10.5s;
-  animation-delay: 14s;
+  animation-delay: 13.5s;
 }
 #ljx{
   position:absolute;
@@ -1241,7 +1241,7 @@ body {
   opacity:0;
   text-shadow: 0.5px 0.5px 0.5px #000000;
   animation:disappear 10s;
-  animation-delay:14.5s;
+  animation-delay:14s;
 }
 
 #jingyi{

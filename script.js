@@ -212,7 +212,7 @@ function showPage(pageId,TF) {
     if (TF===-2){
       document.getElementById('jingyitf').textContent="Jingyi: This is an abandoned piece, but is still a work of art! ……If this painting were to be hung in a museum, would it really be distinguishable from other works of art? ......You are that pigeon who wanted to join our curation project, right?"
     }else{
-      document.getElementById('jingyitf').textContent="Jingyi: Hold on a moment! Please don’t take away this painting, I worked so hard to pick it out!!<br>(Ooh, so Jingyi is a member of the curation project! It is surprising that they are collecting abandoned works from students…!)"
+      document.getElementById('jingyitf').textContent="Jingyi: Hold on a moment! Please don’t take away this painting, I worked so hard to pick it out!! (Ooh, so Jingyi is a member of the curation project! It is surprising that they are collecting abandoned works from students…!)"
     }
   }else if (pageId === 'page17') {
     showResult();
